@@ -1,0 +1,79 @@
+$font-family-sans-serif: "Source Sans Pro",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !default;
+$font-family-serif: "Source Serif Pro",serif !default;
+$font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 1rem !default;
+$font-size-lg: 1.875rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-xs: 0.75rem !default;
+
+$font-weight-normal: normal !default;
+$font-weight-semibold: 600 !default;
+.font-weight-semibold { font-weight: $font-weight-semibold !important; }
+$font-weight-bold: bold !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.25 !default;
+
+$h1-font-size: 1.8rem !default;
+$h2-font-size: 1.5rem !default;
+$h3-font-size: 1.2rem !default;
+$h4-font-size: 1.1rem !default;
+$h5-font-size: 1.05rem !default;
+$h6-font-size: 1rem !default;
+
+// $headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family: 'Source Serif Pro' !default;
+$headings-font-weight: 800 !default;
+$headings-line-height: 1.5 !default;
+$headings-color: inherit !default;
+
+$display1-size: 5rem !default;
+$display2-size: 3.75rem !default;
+$display3-size: 3rem !default;
+$display4-size: 2.25rem !default;
+$display1-weight: $font-weight-bold !default;
+$display2-weight: $font-weight-bold !default;
+$display3-weight: $font-weight-bold !default;
+$display4-weight: $font-weight-bold !default;
+$display-line-height: 1.25 !default;
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  color: $black;
+  font-family: $headings-font-family;
+}
+
+$lead-font-size: 1.5rem !default;
+$lead-font-weight: $font-weight-normal !default;
+
+.lead {
+  color: $black;
+  line-height: $headings-line-height;
+}
+
+a.lead {
+  position: relative;
+  color: $black !important;
+  font-weight: $font-weight-semibold;
+
+  &:hover:before {
+    content: '';
+    position: absolute;
+    height: 44%;
+    background: #dceeff;
+    z-index: -1;
+    bottom: 0;
+    left: -6px;
+    right: -6px;
+  }
+}
+
+$list-inline-padding: 1rem !default;
+.list-inline .list-inline-item {
+  font-size: 1.125rem;
+  font-weight: $font-weight-semibold;
+}

@@ -1,0 +1,38 @@
+.navbar {
+  .navbar-brand {
+    font-family: $font-family-serif;
+    font-weight: $font-weight-bold;
+
+    a {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      position: relative;
+      padding: 0 4px;
+      margin: 0 15px;
+      font-size: 1.25rem;
+      font-weight: $font-weight-semibold;
+
+      &:hover:before {
+        content: '';
+        position: absolute;
+        height: 44%;
+        width: 100%;
+        background: #dceeff;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-down('sm') {
+    padding: 1rem;
+  }
+}

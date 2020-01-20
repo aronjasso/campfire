@@ -1,34 +1,63 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: 'aron.',
+    description: "Aron's Portfolio",
+    author: '@aronjasso',
+    siteUrl: 'http://aronjasso.surge.sh/'
   },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
-}
+  pathPrefix: '/',
+  plugins: [{
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      path: `${__dirname}/content/images/`,
+      name: 'images'
+    }
+  }, {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      name: 'Campfire',
+      short_name: 'campfire',
+      description: "Aron Jasso's Portfolio",
+      start_url: '/',
+      background_color: '#fff',
+      theme_color: '#000',
+      display: 'Source Serif Pro',
+      icons: [{
+        src: '/images/somefile.png',
+        size: '192x192',
+        type: 'image/png'
+      }]
+    }
+  }, {
+    resolve: 'gatsby-plugin-prefetch-google-fonts',
+    options: {
+      fonts: [{
+        family: 'Source Serif Pro',
+        variants: ['400', '600', '700']
+      }, {
+        family: 'Source Sans Pro',
+        variants: ['200', '300', '400', '600', '700', '900']
+      }]
+    }
+  }, {
+    resolve: 'gatsby-plugin-google-analytics',
+    options: {
+      trackingId: 'UA-156354153-1',
+    }
+  }, {
+    resolve: 'gatsby-plugin-netlify',
+    options: {
+      mergeSecurityHeaders: true,
+      mergeLinkHeaders: true,
+      mergeCachingHeaders: true
+    }
+  },
+  'gatsby-plugin-catch-links',
+  'gatsby-plugin-offline',
+  'gatsby-plugin-react-helmet',
+  'gatsby-plugin-sass',
+  'gatsby-plugin-scroll-reveal',
+  'gatsby-plugin-sharp',
+  'gatsby-plugin-sitemap',
+  'gatsby-transformer-sharp'
+]}

@@ -1,0 +1,139 @@
+@import './colors.scss';
+
+$theme-colors: (
+  primary: $red,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800,
+) !default;
+
+// Options
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-gradients: false !default;
+$enable-transitions: false !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1320px,
+) !default;
+
+// Body
+$body-bg: $white !default;
+$body-color: $black !default;
+$inverse-bg: $gray-900 !default;
+$inverse-color: $gray-600 !default;
+
+// Links
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
+
+$border-width: 2px !default;
+$border-radius: .625rem !default;
+$border-radius-lg: 1.25rem !default;
+$border-radius-sm: .375rem !default;
+
+// Fonts
+@import './fonts.scss';
+
+// Navbar
+$navbar-padding-y: 2rem !default;
+$navbar-nav-link-padding-x: 1rem !default;
+$navbar-light-color: $black !default;
+$navbar-light-brand-color: $black !default;
+// $navbar-light-brand-hover-color: $yellow !default;
+
+// Jumbotron
+$jumbotron-padding: 1.5rem !default;
+$jumbotron-bg: transparent !default;
+
+// Buttonss + Forms
+$input-btn-padding-y: .75rem !default;
+$input-btn-padding-x: 1.5rem !default;
+$input-btn-font-size: 1.125rem !default;
+$btn-font-weight: $font-weight-semibold;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+  line-height: $headings-line-height;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-down('lg') {
+    font-size: 1.3125rem;
+    margin-bottom: 18px;
+  }
+}
+
+img {
+  margin-bottom: 15px;
+  max-width: 100%;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+img:hover {
+  animation: pulse 0.5s;
+}
+
+#hero-title {
+  padding: 90px 0 200px;
+  margin: 0;
+}
+
+#featured-work {
+  margin-top: -120px;
+}
+
+.content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@include media-breakpoint-down('lg') {
+  .display-2 { font-size: 3rem; }
+  .display-3 { font-size: 2.25rem; }
+  #featured-work { margin-top: -50px; }
+}
+
+@include media-breakpoint-down('sm') {
+  .display-2 { font-size: 2rem; }
+  .display-3 { font-size: 2rem; }
+  #featured-work { margin-top: -20px; }
+  .content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@import './components/buttons.scss';
+@import './components/footer.scss';
+@import './components/navbar.scss';
+@import './components/jumbotron.scss';

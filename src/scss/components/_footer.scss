@@ -1,0 +1,25 @@
+.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .footer_branding {
+    font-family: $font-family-serif;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+
+    a {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  .list-inline {
+    margin: 7px 0;
+
+    .list-inline-item a {
+      font-size: inherit;
+    }
+  }
+}

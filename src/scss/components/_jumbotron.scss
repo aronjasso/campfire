@@ -1,0 +1,46 @@
+.jumbotron {
+  margin-bottom: 3rem;
+
+  #title { margin: 90px 0 0; }
+
+  #hello-aron {
+    position: absolute;
+    top: 60px;
+    left: 22px;
+  }
+
+  #hello-sarah {
+    position: absolute;
+    top: 158px;
+    right: 10px;
+  }
+
+  #hello-bg {
+    position: absolute;
+    top: 0;
+    left: -26px;
+  }
+
+  @include media-breakpoint-down('lg') {
+    #title { margin: 40px 0 0; }
+
+    #hello-aron {
+      left: 56px;
+      width: 130px;
+    }
+
+    #hello-sarah {
+      right: 0;
+      width: 180px;
+    }
+
+    #hello-bg {
+      left: 10px;
+      width: 320px;
+    }
+  }
+
+  @include media-breakpoint-down('sm') {
+    padding: 0;
+  }
+}
